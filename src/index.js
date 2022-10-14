@@ -1,5 +1,13 @@
 import './style.css';
+import Submit from './submit'
 console.log("works")
+
+//event listener on buttons 
+let submitButton = document.getElementById("submitButton")
+submitButton.addEventListener("click", function () { Submit()})
+
+let lookupButton = document.getElementById("lookupButton")
+lookupButton.addEventListener("click", function () {console.log("clicked lookup")})
 
 //create a user class 
 class User {
@@ -19,8 +27,6 @@ class User {
     set email(email){
          this._email = email;
     }
-
-
 }
 
 //create a promoter class 
@@ -36,3 +42,4 @@ class Promter {
 
 const jack = new User("Jack", "jack@wearee.nl")
 console.log(jack)
+console.log(jack.name)
